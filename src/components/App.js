@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
 
+const relatives = ["relative1", "relative2", "relative3", "relative4"];
 const App = () => {
   return (
     <div id="main">
-               {/* Do not remove the main div */}
+      <ol key={"relativeList"}>
+        {relatives.map((relative, i) => (
+          <li key={`relativeListItem${i + 1}`}>{relative}</li>
+        ))}
+      </ol>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
